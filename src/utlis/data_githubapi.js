@@ -1,5 +1,5 @@
 const checkResponse = res => {
-    if(res.status === 200){
+    if(res.status !== 200){
         console.log(`Error with request! ${res.status} `);
         return;
     }
