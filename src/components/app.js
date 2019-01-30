@@ -1,14 +1,17 @@
 import React from 'react';
-import Githubapi from './components/githubapi';
-import Obstacle from './components/obstacle';
+import Landing from './landing/landing'
+import Githubapi from './githubapi/githubapi';
+// import Obstacle from './obstacle';
 
-export default class App extends from React.Component {
+export default class App extends React.Component {     
     render() {
-        return (
+        return(
             <div>
+                <Landing />
                 <Githubapi />
-                <Obstacle />
+                {/* <Obstacle /> */}
             </div>
         );
     }
 }
+
