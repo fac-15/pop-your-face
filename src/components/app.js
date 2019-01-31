@@ -2,9 +2,10 @@ import React from 'react';
 import Landing from './landing/landing'
 import {UserImage} from './githubapi/githubapi';
 import { githubData } from '../utlis/data_githubapi';
+import Counter from './counter/Counter';
 // import Obstacle from './obstacle';
 
-export default class App extends React.Component {  
+export default class App extends React.Component {
     state = {
         userData: ''
     }
@@ -16,6 +17,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div>
+                <Counter />
                 <Landing handleUser={this.handleUser}/>
                 <UserImage userData={this.state.userData}/>
                 {/* <Obstacle /> */}
@@ -23,4 +25,3 @@ export default class App extends React.Component {
         );
     }
 }
-
