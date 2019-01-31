@@ -1,0 +1,9 @@
+/* github image is in the background */
+.github{
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-image: url("https://www.dropbox.com/s/mndikdukkrbzxeq/me.png?raw=1"); /
+}
+
+/* gem image in the html */
+<img src="https://www.dropbox.com/s/qgokoug7jn9cqvy/GEMbig.png?raw=1" alt="gem" height="220" width="220" class="github">
