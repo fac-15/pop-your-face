@@ -1,14 +1,23 @@
 import React from 'react';
 import Landing from './landing/landing'
-import Githubapi from './githubapi/githubapi';
+import {UserImage} from './githubapi/githubapi';
+import { githubData } from '../utlis/data_githubapi';
 // import Obstacle from './obstacle';
 
-export default class App extends React.Component {     
+export default class App extends React.Component {  
+    state = {
+        userData: ''
+    }
+
+    handleUser = (value) => {
+        githubData(value).then(data => this.setState({userData: data}));
+    }
+
     render() {
         return(
             <div>
-                <Landing />
-                <Githubapi />
+                <Landing handleUser={this.handleUser}/>
+                <UserImage userData={this.state.userData}/>
                 {/* <Obstacle /> */}
             </div>
         );
