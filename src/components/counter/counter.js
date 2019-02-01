@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>game timer</title>
-<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<link rel="stylesheet" href="counter.css" type="text/css" media="all">
-</head>
-<body>
-    
-<div id="container"></div> <!--  required to start page-->
-  <div id="SimpleCounter"></div>
- 
-  <script type="text/babel">
-    class SimpleCounter extends React.Component {
+import React from 'react';
+import {githubData} from '../../utlis/data_githubapi';
+import Landing from '../landing/landing';
+import './counter.css';
+
+export default class Counter extends React.Component {
+
       constructor(props) {
         super(props);
         this.state = {
@@ -25,8 +15,8 @@
       }
       timerTick() {
         this.setState((prevState) => {
-          return { 
-            count: prevState.count - 1 
+          return {
+            count: prevState.count - 1
           };
         });
       }
@@ -41,26 +31,17 @@
             clearInterval(this.timer);
         }
       }
-        
+
       componentWillUnmount() {
         console.log("Component is about to be unmounted!");
         clearInterval(this.timer);
       }
       render() {
         console.log("SimpleCounter render call!");
-        
+
         return (
-          
-           <h1> {this.state.count == 0 ?  "Game Over!" : this.state.count} </h1>
+
+           <h6> {this.state.count == 0 ?  "Game Over!" : this.state.count} </h6>
         );
       }
-    }
-    ReactDOM.render(
-      <div>
-        <SimpleCounter />
-      </div>,
-      document.querySelector("#container")
-    );
-  </script>
-</body>
-</html>
+}

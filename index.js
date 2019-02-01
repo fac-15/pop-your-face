@@ -4,4 +4,6 @@ import ReactDOM from "react-dom";
 
 import App from "./src/components/app.js";
 
+// import Counter from "./src/components/Counter/app.js";
+
 ReactDOM.render(<App />, document.getElementById("root"));
