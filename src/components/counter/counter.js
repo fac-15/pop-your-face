@@ -7,7 +7,7 @@ export default class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 60 //start count 120
+      count: 30 //start count 120
     };
   }
 

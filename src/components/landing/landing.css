@@ -1,10 +1,56 @@
 .loading {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     font-family: 'Major Mono Display', monospace;
-    font-weight: 700;
+    font-weight: 1000;
+    line-height: 40px;
 }
 
 body{
     background-color: beige;
+}
+
+#pop {
+  font-family: 'Quicksand', sans-serif;
+  color: red;
+  font-size: 4em;
+  text-align: center;
+  font-weight: 700;
+}
+
+form input#userinput {
+  height: 2em;
+  width: 12em;
+  margin: 3em;
+  margin-left: 300px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+
+::placeholder, ::placeholder value{
+  color: red;
+  font-weight: 700;
+  font-size: 2em;
+  padding: 1em;
+}
+
+form button {
+  height: 3.5em;
+  width: 6em;
+  margin: 3em;
+  background:red;
+  border-radius: 5px;
+  margin-left: 0;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 0;
+}
+
+input[type=text] {
+    padding:10px;
+    border:2px solid #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 2em;
+    font-weight: 700;
 }
