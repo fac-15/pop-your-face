@@ -4,9 +4,9 @@
     }
 h6 {
     font-family: sans-serif;
-    font-size: 72px;
-    width: 3em;
-    height: 2.5em;
+    font-size: 100px;
+    width: 200px;
+    height: 100px;
     padding: 30px;
     text-align: center;
     margin: 0;
@@ -14,10 +14,25 @@ h6 {
     background-color: #2b72b8;
     color: #fff;
     display: block;
-    float: center;
+    float: right;
     margin: auto;
   }
 
-p {
-        font-size: 50px;
-    }
+.start {
+  font-family: sans-serif;
+  font-size: 72px;
+  width: 250px;
+  height: 150px;
+  padding: 30px;
+  text-align: center;
+  margin: 0;
+  border-radius: 15px;
+  border: none;
+  background-color:darkblue;
+  color: #fff;
+  display: block;
+  float: left;
+  margin: auto;
+  } 
+
+

@@ -2,9 +2,7 @@ import React from "react";
 import "./githubapi.css";
 
 export const UserImage = props => {
-  if (!props.userData) {
-    return <h3>Please wait :)</h3>;
-  }
+
 
   // const images = Array.from({ length: 30 });
   // let imageClass = props.className;

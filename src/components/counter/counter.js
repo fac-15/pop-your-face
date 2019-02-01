@@ -1,47 +1,44 @@
-import React from 'react';
-import {githubData} from '../../utlis/data_githubapi';
-import Landing from '../landing/landing';
-import './counter.css';
+import React from "react";
+import { githubData } from "../../utlis/data_githubapi";
+import Landing from "../landing/landing";
+import "./counter.css";
 
 export default class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 60 //start count 120
+    };
+  }
 
-      constructor(props) {
-        super(props);
-        this.state = {
-          count: 5 //start count 120
-        };
-        this.timerTick = this.timerTick.bind(this);
-        console.log("Constructor!");
-      }
-      timerTick() {
-        this.setState((prevState) => {
-          return {
-            count: prevState.count - 1
-          };
-        });
-      }
-      componentDidMount() {
-        this.timer = setInterval(this.timerTick, 1000);
-        console.log("Component has mounted!");
-      }
-      componentDidUpdate(prevProps, prevState) {
-          console.log("THIS.TIMER: ",this.timer);
-        console.log("Component updated from: " + prevState.count);
-        if (this.state.count == 0) {
-            clearInterval(this.timer);
-        }
-      }
+  timerTick = () => {
+    this.setState(prevState => {
+      return {
+        count: prevState.count - 1
+      };
+    });
+  }
 
-      componentWillUnmount() {
-        console.log("Component is about to be unmounted!");
-        clearInterval(this.timer);
-      }
-      render() {
-        console.log("SimpleCounter render call!");
+  startClick = () => {
+    this.timer = setInterval(this.timerTick, 1000);
+  }
 
-        return (
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.count == 0) {
+      clearInterval(this.timer);
+    }
+  }
 
-           <h6> {this.state.count == 0 ?  "Game Over!" : this.state.count} </h6>
-        );
-      }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.startClick} className='start'>Start!</button>
+        <h6> {this.state.count == 0 ? "Game Over!" : this.state.count+'s'} </h6>
+      </div>
+    );
+  }
 }
