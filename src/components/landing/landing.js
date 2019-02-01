@@ -1,4 +1,5 @@
 import React from 'react';
+import './landing.css';
 
 export default class Landing extends React.Component {
     constructor(props){
@@ -14,15 +15,14 @@ export default class Landing extends React.Component {
         event.preventDefault();
         this.props.handleUser(this.state.value);
     }
-    
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <h1>Pop your face!</h1>
+                <h1 id="pop">🎈Pop your face!🎈</h1>
                 <input type="text" id='userinput' placeholder='Type your Github ID here!' value={this.state.value} onChange={this.handleChange}/>
-                <button type='submit'>Submit</button> 
+                <button type='submit'>Submit</button>
             </form>
         );
     }
 }
-

@@ -16,6 +16,7 @@ h6 {
     display: block;
     float: right;
     margin: auto;
+    margin-right: .8em;
   }
 
 .start {
@@ -33,6 +34,5 @@ h6 {
   display: block;
   float: left;
   margin: auto;
-  } 
-
-
+  margin: 0 70px;
+  }
