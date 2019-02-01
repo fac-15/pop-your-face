@@ -1,9 +1,20 @@
-/* github image is in the background */
-.github{
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-image: url("https://www.dropbox.com/s/mndikdukkrbzxeq/me.png?raw=1"); /
+/* github image image in the html */
+img {
+  padding: 30px;
+  width: 92px;
+  height: 92px;
 }
 
-/* gem image in the html */
-<img src="https://www.dropbox.com/s/qgokoug7jn9cqvy/GEMbig.png?raw=1" alt="gem" height="220" width="220" class="github">
+/* GEM image in background */
+img.github{
+  z-index: -1;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-image: url("https://www.dropbox.com/s/2lo7p1rykwt840y/GEMSM.png?raw=1");
+  cursor: pointer;
+}
+
+/* NOTE: MOVE THIS img tag to html page */
+/* replace src with git pic */
+
+/* <img src="https://www.dropbox.com/s/mndikdukkrbzxeq/me.png?raw=1" alt="github face"  class="github"  > */
