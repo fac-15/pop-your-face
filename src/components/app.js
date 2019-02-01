@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import Landing from "./landing/landing";
 import { UserImage } from "./githubapi/githubapi";
 import { githubData } from "../utlis/data_githubapi";
-import Counter from './counter/Counter';
+import Counter from './counter/counter';
 
 
 export default class App extends React.Component {
@@ -38,6 +37,8 @@ export default class App extends React.Component {
           onClick={() => this.handleClick(id)}
           className={this.state.imagesClicked.includes(id)?'clicked':id}
           />))}
+          <Counter />
       </div>
     );
   }
+}
